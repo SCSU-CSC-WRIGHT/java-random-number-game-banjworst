@@ -45,13 +45,16 @@ public class NumberGame {
                 System.out.println("Too low! Try again.");
             } else if (guess > randomNumber) {
                 System.out.println("Too high! Try again.");
-            } else {
+            } else if (guess == randomNumber) {
                 System.out.println("Congratulations! You've guessed the number in " + attempts + " attempts.");
+            } else if (attempts == 10) {
+                System.out.println("Sorry, you've used all your attempts. The number was " + randomNumber + ".");
             }
 
             
 
-        scanner.close();
+       
     }
+    scanner.close();
 }
 }
